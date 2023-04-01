@@ -3,16 +3,16 @@ import "./videoFooter.css";
 import vinil from "./imagens/vinil.png"
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
-export const VideoFooter = () => {
+export const VideoFooter = ({name, description, music}) => {
   return (
     <div className="videoFooter">
       <div className="videoFooter__text">
-        <h3>@drigoagnelli Ebac</h3>
-        <p>Descrição do Vídeo</p>
+        <h3>@{name}</h3>
+        <p>{description}</p>
         <div className="videoFooter__music"> 
           <MusicNoteIcon className="videoFooter__icon"/>
           <div className="videoFooterMusic__text">
-          <p>Titulo da musica</p>
+          <p>{music}</p>
           </div>
         </div>
       </div>
@@ -23,4 +23,6 @@ export const VideoFooter = () => {
         />
     </div>
   );
-};
+}
+
+export default VideoFooter;
